@@ -1,29 +1,27 @@
 {
-    "description": "session",
-    "main": "index.js",
-  "engines" : { 
-    "npm" : ">=9.7.2",
-    "node" : ">=20.0.0"
-    },
-    "scripts": {
-    "start": "node index.js"
+  "name": "arslan-pairing-site",
+  "version": "0.0.1",
+  "description": "A multi functional whatsapp bot Web paircode Created By ArslanMD Official.",
+  "main": "arslan.js",
+  "scripts": {
+    "start": "pm2 start arslan.js --deep-monitoring --attach --name Arslan-MD",
+    "stop": "pm2 stop Arslan-MD",
+    "restart": "pm2 restart Arslan-MD"
   },
-  "author": "Malvin King",
-  "license": "GPL-3.0 license",
   "dependencies": {
-    "baileys-pro": "latest",
-    "maher-zubair-baileys": "^6.6.5",
-    "baileys": "npm:wileys",
+    "@whiskeysockets/baileys": "npm:wileys",              
+    "@adiwajshing/keyed-db": "^0.2.4",
     "qrcode": "^1.5.3",
     "awesome-phonenumber": "^2.64.0",
     "pino": "^8.1.0",
-    "phone" : "3.1.30",
+    "phone": "3.1.30",
     "body-parser": "^1.20.1",
-    "pastebin-js": "^1.0.6",
     "express": "^4.18.1",
     "path": "^0.12.7",
+    "pastebin-js": "latest",
     "megajs": "1.1.7",
-    "baileys-elite" : "latest",
-    "jimp": "^0.16.13"
-   }
+    "pm2": "^6.0.6",
+    "jimp": "^0.16.1",
+    "async-mutex": "0.4.1"
+  }
 }
